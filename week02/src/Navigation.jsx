@@ -5,21 +5,21 @@ function Navigation(props) {
 
 
   return (
-    <nav className="navbar">
-      <div className="navgroup">
-        <a className="navbar-brand" href="/">
+    <nav className="flex items-center justify-between py-10 px-20">
+      <div className="flex gap-x-20">
+        <a className="font-semibold text-3xl" href="/">
           Mebius
         </a>
-        <div className="nav-links">
+        <div className="flex items-center gap-4">
           <a href="/">Home</a>
           <a href="/shop">Shop</a>
         </div>
       </div>
-      <div className="cart-section">
+      <div className="flex items-center gap-4">
         <div>
-          <a href="/cart" className="cart-link">
-            <p className="cart-count">{props.cartCount}</p>
-            <div className="cart-icon">
+          <a href="/cart" className="flex items-center gap-4 relative">
+            <p className="text-lg">{props.cartCount}</p>
+            <div className="flex items-center gap-2">
               <ShoppingCart />
               Cart
             </div>
